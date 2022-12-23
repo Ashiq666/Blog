@@ -1,0 +1,18 @@
+
+{% extends "blog/base.html" %} 
+{% block content %} 
+    {% for i in posts %}
+    <div class="card mb-2">
+        <div class="card-header card-header-deg">
+            {{i.title}}
+            <span class="text-muted" style="margin-right: 0;">posted on: </span>{{i.date}}
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>{{i.content}}</p>
+            <footer class="blockquote-footer mt-1">{{i.author}}</footer>
+          </blockquote>
+        </div>
+      </div>
+    {% endfor %} 
+{% endblock content %}

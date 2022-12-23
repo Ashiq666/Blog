@@ -1,0 +1,29 @@
+.nav-background{
+    background-color: #ADA0B4;
+}
+
+.nav-logo{
+    margin-left: 100px;
+}
+.nav-item-color{
+    color: white;
+}
+.nav-item-color:hover{
+    color: black;
+}
+.menu{
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+.side-text{
+    color: #ADA0B4;
+
+}
+.mart{
+    margin-top: 30px;
+}
+
+.side-text:hover{
+    color: black;
+}
