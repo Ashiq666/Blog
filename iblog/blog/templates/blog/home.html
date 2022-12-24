@@ -1,9 +1,11 @@
 
 {% extends "blog/base.html" %} 
+{% load static %}
+{% block style %} <link rel="stylesheet" type="text/css" href="{% static 'blog/home.css' %}"> {% endblock %}
 {% block content %} 
     {% for i in posts %}
     <div class="card mb-2">
-        <div class="card-header card-header-deg">
+        <div class="card-header">
             {{i.title}}
             <span class="text-muted" style="margin-right: 0;">posted on: {{i.date_posted}}</span>
         </div>
