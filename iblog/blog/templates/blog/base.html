@@ -29,6 +29,7 @@
                 </li>
               </ul>
               {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" class="nav-item-color mx-4" style="text-decoration: none;">{{user.username}}</a>
                 <a href="{% url 'logout' %}" class="nav-item-color mx-4" style="text-decoration: none;">Logout</a>
               {% else %}
                 <a href="{% url 'login' %}" class="nav-item-color" style="text-decoration: none;">Login</a>
@@ -38,13 +39,15 @@
           </div> 
       </nav>
       <div class="row">
-        <div class="menu col-md-2">
-            <a style="text-decoration: none;" class="side-text" type="button" href="#">Create Post</a> <br>
-            <a style="text-decoration: none;" class="side-text" type="button" href="#">Latest Post</a> <br>
-            <a style="text-decoration: none;" class="side-text" type="button" href="#">Notice</a> <br>
-            <a style="text-decoration: none;" class="side-text" type="button" href="#">Calenders</a> <br>
-            <a style="text-decoration: none;" class="side-text" type="button" href="{% url 'blog-about' %}">About</a> <br>
-        </div>
+     
+          <div class="menu col-md-2">
+              <a style="text-decoration: none;" class="side-text" type="button" href="#">Create Post</a> <br>
+              <a style="text-decoration: none;" class="side-text" type="button" href="#">Latest Post</a> <br>
+              <a style="text-decoration: none;" class="side-text" type="button" href="#">Notice</a> <br>
+              <a style="text-decoration: none;" class="side-text" type="button" href="#">Calenders</a> <br>
+             <a style="text-decoration: none;" class="side-text" type="button" href="{% url 'blog-about' %}">About</a> <br>
+         </div>
+       
         <div class="col-md-6 mart">
           {% if messages %}
             {% for message in messages %}
