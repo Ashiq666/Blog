@@ -1,5 +1,14 @@
 {% extends "blog/base.html" %} 
 {% block content %} 
-    <h1>{{user.username}}</h1>
+<div class="d-flex">
+    <div class="text-center">
+        <img style="width: 200px; height:200px; border-radius: 50%" src="{{user.profile.image.url}}" alt="profile_picture">
+    </div>
+    <div class="mx-5 mt-5">
+        <h4>Name: <span class="text-muted">{{user.first_name}} {{user.last_name}}</span></h4>
+    <h4>Email: <span class="text-muted">{{user.email}}</span></h4>
+    </div>
+</div>
+
 {% endblock content %}
     
