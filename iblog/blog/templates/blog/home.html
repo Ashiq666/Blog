@@ -6,7 +6,7 @@
     {% for i in posts %}
     <div class="card mb-2">
         <div class="card-header">
-            <a style="text-decoration: none; color: black;" href="{% url 'post-detail' i.id %}"><h5>{{i.title}}</h5></a>
+            <a style="text-decoration: none; color: black;" href="{% url 'post-detail' i.id %}"><h5>{{i.title}} <a class="text-muted" style="padding: 3px; text-decoration: none; font-size: 12px; float:right" href="{% url 'post-detail' i.id %}" type="button">Details</a></h5></a>
             <span class="text-muted" style="margin-right: 0;">posted on: {{i.date_posted}}</span>
         </div>
         <div class="card-body">
