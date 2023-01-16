@@ -3,18 +3,16 @@
 {% load static %}
 {% block style %} <link rel="stylesheet" type="text/css" href="{% static 'blog/home.css' %}"> {% endblock %}
 {% block content %} 
-    {% for i in posts %}
     <div class="card mb-2">
         <div class="card-header">
-            <a style="text-decoration: none; color: black;" href="{% url 'post-detail' i.id %}"><h5>{{i.title}}</h5></a>
-            <span class="text-muted" style="margin-right: 0;">posted on: {{i.date_posted}}</span>
+            {{object.title}}
+            <span class="text-muted" style="margin-right: 0;">posted on: {{object.date_posted}}</span>
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p>{{i.content}}</p>
-            <footer class="blockquote-footer mt-1">{{i.author}}</footer>
+            <p>{{object.content}}</p>
+            <footer class="blockquote-footer mt-1">{{object.author}}</footer>
           </blockquote>
         </div>
       </div>
-    {% endfor %} 
 {% endblock content %}
